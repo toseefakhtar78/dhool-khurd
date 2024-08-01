@@ -102,7 +102,7 @@ function PlayerX1() {
      
        {players.map(player => <div className="" key={player.id}>
         <Image src={player.imgUrl} alt={player.name} width={300} height={300} />
-        <div style={{marginTop: '1rem', justifyContent: 'space-between'}} className="flex">
+        <div style={{marginTop: '1rem', justifyContent: 'space-between'}} className="flex ">
             <h3>{player.name}  ({player.role})</h3>
             <h3>{player.shirtNo}</h3>
         </div>
