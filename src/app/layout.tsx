@@ -19,7 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
       crossOrigin="anonymous"></Script>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+      <footer className="text-yellow-200">Developed By: Dr. Ayaz Ahmed Goraya</footer>
+
+      </body>
     </html>
   );
 }
