@@ -98,7 +98,7 @@ function PlayerX1() {
   return (
     <>
       <h2 className="text-yellow-500"> Here Our Team Members Are</h2>
-    <div style={{marginTop: '1.5rem',flexWrap: 'wrap',gap:'2rem'}} className="flex items-center  justify-center text-yellow-500 ">
+    <div style={{marginTop: '1.5rem',flexWrap: 'wrap',gap:'2rem',justifyContent:'center'}} className="flex items-center  justify-center text-yellow-500 ">
      
        {players.map(player => <div className="" key={player.id}>
         <Image src={player.imgUrl} alt={player.name} width={300} height={300} />
