@@ -11,21 +11,21 @@ const players = [
    {
         id: 1,
         name: "Ch Sunny",
-        role: "Team Manager",
+        role: "Captain",
         imgUrl: "/team-members/Sunny.jpeg",
         shirtNo: '#808'
     },
     {
         id: 2,
         name: "Khurram Shahzad",
-        role: "Captain",
+        role: "All Rounder",
         imgUrl: "/team-members/Khurram.jpeg",
         shirtNo: '#100'
     },
     {
         id: 3,
         name: "Atif Ali",
-        role: "Vice Captain",
+        role: "All Rounder",
         imgUrl: "/team-members/Atif.jpeg",
         shirtNo: '#16'
     },
