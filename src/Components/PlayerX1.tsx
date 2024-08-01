@@ -2,6 +2,13 @@ import Image from "next/image"
 
 const players = [
     {
+        id: 0,
+        name: "Yaseen Jutt",
+        role: "Chairman",
+        imgUrl: "/team-members/Yaseen.jpeg",
+        shirtNo: '#295'
+    },
+   {
         id: 1,
         name: "Ch Sunny",
         role: "Team Manager",
