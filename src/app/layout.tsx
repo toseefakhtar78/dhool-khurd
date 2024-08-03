@@ -18,15 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+     
+      <head><GoogleTagManager gtmId="G-3WF9PRTKHS" />
       <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
         crossOrigin="anonymous"
       ></Script>
-      
+      </head>
       <body className={inter.className}>
         {children}
-        <GoogleTagManager gtmId="G-3WF9PRTKHS" />
+        
         <footer className="text-yellow-200">
           Developed By: Dr. Ayaz Ahmed Goraya
         </footer>
