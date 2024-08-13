@@ -29,9 +29,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
 
-        <footer className="text-yellow-200">
-          Developed By: Dr. Ayaz Ahmed Goraya
-        </footer>
       </body>
     </html>
   );

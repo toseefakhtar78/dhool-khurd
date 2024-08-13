@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 
 const players = [
@@ -104,7 +105,11 @@ const players = [
 function PlayerX1() {
   return (
     <>
-      <h2 className="text-yellow-500"> Here Our Team Members Are</h2>
+    <div className="items-center flex justify-center"><Image src="/logo.png" alt="Logo" width={200} height={100} priority /></div>
+    <h1 className="text-yellow-500 pt-[-100px] text-center font-bold">
+          Welcome To The Official Page Of<br/> <span className="">Dhool Khurd Cricket Club</span> 
+        </h1>
+      <h2 className="text-yellow-500 text-center text-sm mt-2"> Here Our Team Members Are</h2>
     <div style={{marginTop: '1.5rem',flexWrap: 'wrap',gap:'2rem',justifyContent:'center'}} className="flex items-center  justify-center text-yellow-500 ">
      
        {players.map(player => <div className="" key={player.id}>
