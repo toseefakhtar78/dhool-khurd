@@ -5,7 +5,7 @@ export const sidebarLinks = [
       label: "Home",
     },
     {
-      imgURL: "/icons/cricket.png",
+      imgURL: "/icons/CI.jpg",
       route: "/Team",
       label: "Cricket-Team",
     },
@@ -16,7 +16,7 @@ export const sidebarLinks = [
       label: "Voter-List",
     },
     {
-      imgURL: "/icons/property.png",
+      imgURL: "/icons/PI.webp",
       route: "/HouseForRent",
       label: "Property's",
     },

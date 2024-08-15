@@ -1,5 +1,6 @@
 "use client"
-import { sidebarLinks } from '/home/toseef/Desktop/Next-Js/Dhool-khurd/constants'
+// import { sidebarLinks } from '@/constants/index.ts'
+import { sidebarLinks } from '../../constants'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'

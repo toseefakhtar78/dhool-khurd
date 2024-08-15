@@ -8,7 +8,8 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/Components/components/ui/sheet"
-import { sidebarLinks } from "/home/toseef/Desktop/Next-Js/Dhool-khurd/constants"
+// import { sidebarLinks } from "/home/toseef/Desktop/Next-Js/Dhool-khurd/constants"
+import { sidebarLinks } from "../../constants"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
