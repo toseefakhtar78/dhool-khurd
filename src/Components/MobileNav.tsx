@@ -24,18 +24,24 @@ import React, { useState } from "react";
 const components = [
   {
     title: "Electrions",
-    href: "/docs/primitives/alert-dialog",
+    href: "/Services",
     description: "",
   },
   {
     title: "Shops for delivery",
-    href: "/docs/primitives/hover-card",
+    href: "/Services/Shops",
     description: "",
   },
   {
     title: "Mechanics",
-    href: "/docs/primitives/progress",
+    href: "/Services/Mechanics",
     description: "",
+  },
+  {
+    title: "House For Rent",
+    href: "/HouseForRent",
+    description:
+      "",
   },
 ];
 
@@ -58,24 +64,22 @@ const MobileNav = () => {
       <Sheet  open={sidebarOpen} onOpenChange={setSidebarOpen}>
         <SheetTrigger>
           <Image
-            src="/icons/HB.jpg"
-            height={30}
-            width={30}
+            src="/icons/Ham1.png"
+            height={50}
+            width={50}
             alt="menu"
-            className="cursor-pointer color-white"
+            className="cursor-pointer "
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none  bg-stone-600 p-4">
-          <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
-            <Image src="/icons/D2.png" alt="logo" width={140} height={134} />
-            
+        <SheetContent side="left" className="border-none  bg-stone-600  ">
+          <Link href="/" className="cursor-pointer flex items-center  border-b border-white">
+            <Image src="/icons/D2.png" alt="logo" width={140} height={130} />
           
-            
           </Link>
           
-            <div className="mt-16">
+            <div className="mt-8">
             <NavigationMenu>
-              <NavigationMenuList className="flex flex-col space-y-2">
+              <NavigationMenuList className="flex flex-col space-y-1">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     onClick={() => handleMenuClick("sports")}
@@ -91,14 +95,14 @@ const MobileNav = () => {
                   >
                     <ul className="flex flex-col  gap-2 p-2 w-[150px]  ">
                       <ListItem href="/Team" title="Cricket Team" onClick={handleItemClick} />
-                      <ListItem href="/docs/installation" title="Volleyball Team" onClick={handleItemClick} />
+                      <ListItem href="/Team/VolleyBall" title="Football Team" onClick={handleItemClick} />
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     onClick={() => handleMenuClick("services")}
-                    className="cursor-pointer ml-1"
+                    className="cursor-pointer ml-0"
                   >
                     Services
                   </NavigationMenuTrigger>
@@ -108,7 +112,7 @@ const MobileNav = () => {
                       openMenu === "services" ? "block" : "hidden"
                     )}
                   >
-                    <ul className="flex flex-col gap-2 p-4 w-[250px] rounded-lg">
+                    <ul className="flex flex-col gap-1 p- w-[200px] rounded-lg">
                       {components.map((component) => (
                         <ListItem
                           key={component.title}
@@ -116,7 +120,7 @@ const MobileNav = () => {
                           href={component.href}
                           onClick={handleItemClick}
                         >
-                          {component.description}
+                          <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
                         </ListItem>
                       ))}
                     </ul>
@@ -133,8 +137,8 @@ const MobileNav = () => {
               </NavigationMenuList>
             </NavigationMenu>
             </div>
-            <footer className="border-b text-center border-white py-0 font-mono mt-[610px] text-sm">
-             <span className="font-bold p-1 mr-4">DEV BY</span>:  AYAZ AHMED GORAYA <br/>
+            <footer className="border-b text-center text-zinc-950 border-white  font-mono mt-[280px] text-sm">
+             <span className="font-bold p-1 mr-4">DEV BY</span>:  AYAZ AHMED <br/>
              &nbsp;&nbsp;&nbsp;&nbsp; & Toseef Akhter
             </footer>
          
@@ -160,7 +164,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 p-2 border-b border-white py-4  leading-none text-white hover:underline outline-none hover:outline-yellow-500 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 p-2 border-b border-white py-4  leading-none text-white outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}

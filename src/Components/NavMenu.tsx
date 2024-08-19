@@ -32,6 +32,12 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "",
   },
+  {
+    title: "House For Rent",
+    href: "/HouseForRent",
+    description:
+      "All shops and houses for sell or rent",
+  },
 
 ]
 
@@ -42,7 +48,7 @@ const  NavMenu=()=> {
         <NavigationMenuItem className="hover:underline-offset-4">
           <NavigationMenuTrigger>Sports</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className=" gap-2 flex flex-col p-0 text-center md:w-[400px] lg:w-[150px] lg:grid-cols-[.75fr_1fr]">
+            <ul className=" gap-0 flex flex-col p-0 text-center md:w-[400px] lg:w-[150px] lg:grid-cols-[.75fr_1fr]">
               {/* <li className="row-span-2"> */}
                 {/* <NavigationMenuLink asChild>
                   {/* <a
@@ -63,7 +69,7 @@ const  NavMenu=()=> {
               <ListItem href="/Team" title="Cricket">
                 {/* Re-usable components built using Radix UI and Tailwind CSS. */}
               </ListItem>
-              <ListItem href="/Team/VolleyBall" title="Volleyball">
+              <ListItem href="/Team/VolleyBall" title="Football">
                 {/* How to install dependencies and structure your app. */}
               </ListItem>
               {/* <ListItem href="/docs/primitives/typography" title=""> */}
@@ -75,14 +81,14 @@ const  NavMenu=()=> {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-0 text-center md:w-[500px] md:grid-cols-1 lg:w-[200px] ">
+            <ul className="grid w-[400px] gap- p-0 text-center md:w-[500px] md:grid-cols-1 lg:w-[200px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
                 </ListItem>
               ))}
             </ul>
@@ -110,7 +116,7 @@ const ListItem = React.forwardRef<
         <a 
           ref={ref}
           className={cn(
-            "block select-none space-y-1  p-0 border-b border-white py-4  leading-none text-white  outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 bg-stone-950 p-0 border-b border-white py-4  leading-none text-white  outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
