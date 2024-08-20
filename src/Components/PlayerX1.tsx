@@ -114,7 +114,7 @@ function PlayerX1() {
       text=""
       backgroundImage="/icons/Cb.jpg"
       textColor="custom-white"
-      height="50vh"
+    
       />
     
     </div>

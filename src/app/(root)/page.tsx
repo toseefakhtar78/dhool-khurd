@@ -7,7 +7,7 @@ export default function Home() {
         <Banner text=" This is Official website of DHOOL KHURD village (a digital village) Welcome all 👋 " 
             backgroundImage='/icons/23.jpg'
              textColor="custom-black"
-             height="70vh"
+             alt="banner"
         />
       </div>
 
