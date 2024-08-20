@@ -126,7 +126,7 @@ function PlayerX1() {
     Dhool Khurd Cricket Club
   </span>
 </h1>
-<h2 className="text-yellow-500 text-center text-sm mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+<h2 className="text-yellow-500 text-center  mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
   Here Our Team Members Are
 </h2>
      
