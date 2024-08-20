@@ -1,10 +1,9 @@
 "use client";
+
 import {
   Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTitle,
   SheetTrigger,
+  SheetContent,
 } from "@/Components/components/ui/sheet";
 import {
   NavigationMenu,
@@ -13,36 +12,17 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/Components/components/ui/navigation-menu";
-
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const components = [
-  {
-    title: "Electrions",
-    href: "/Services",
-    description: "",
-  },
-  {
-    title: "Shops for delivery",
-    href: "/Services/Shops",
-    description: "",
-  },
-  {
-    title: "Mechanics",
-    href: "/Services/Mechanics",
-    description: "",
-  },
-  {
-    title: "House For Rent",
-    href: "/HouseForRent",
-    description:
-      "",
-  },
+  { title: "Electrions", href: "/Services", description: "" },
+  { title: "Shops for delivery", href: "/Services/Shops", description: "" },
+  { title: "Mechanics", href: "/Services/Mechanics", description: "" },
+  { title: "House For Rent", href: "/HouseForRent", description: "" },
 ];
 
 const MobileNav = () => {
@@ -57,98 +37,111 @@ const MobileNav = () => {
     setSidebarOpen(false);
   };
 
-
   return (
-    <>   
-     <section className="w-full max-w-[260px] ">
-      <Sheet  open={sidebarOpen} onOpenChange={setSidebarOpen}>
+    <section className="relative w-full max-w-[260px]">
+      <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
         <SheetTrigger>
-          <Image
-            src="/icons/Ham1.png"
-            height={50}
-            width={50}
-            alt="menu"
-            className="cursor-pointer "
-          />
+          <div className="ml-[-10px]">
+            <Image
+              src="/icons/Ham1.png"
+              height={50}
+              width={50}
+              alt="menu"
+              className="cursor-pointer"
+            />
+          </div>
         </SheetTrigger>
-        <SheetContent side="left" className="border-none  bg-stone-600  ">
-          <Link href="/" className="cursor-pointer flex items-center  border-b border-white">
-            <Image src="/icons/D2.png" alt="logo" width={140} height={130} />
-          
+        <SheetContent
+          side="left"
+          className="bg-stone-600 text-white p-4 max-w-[260px] h-full"
+        >
+          <Link href="/" className="flex items-center border-b border-white pb-4">
+            <Image src="/icons/D2.png" alt="logo" width={120} height={100} />
           </Link>
-          
-            <div className="mt-8">
-            <NavigationMenu>
-              <NavigationMenuList className="flex flex-col space-y-1">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger
-                    onClick={() => handleMenuClick("sports")}
-                    className="cursor-pointer  "
-                  >
-                    Sports
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent
-                    className={cn(
-                      "mt-2 z-50",
-                      openMenu === "sports" ? "block" : "hidden"
-                    )}
-                  >
-                    <ul className="flex flex-col  gap-2 p-2 w-[150px]  ">
-                      <ListItem href="/Team" title="Cricket Team" onClick={handleItemClick} />
-                      <ListItem href="/Team/VolleyBall" title="Football Team" onClick={handleItemClick} />
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger
-                    onClick={() => handleMenuClick("services")}
-                    className="cursor-pointer ml-0"
-                  >
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent
-                    className={cn(
-                      "mt-2 z-50",
-                      openMenu === "services" ? "block" : "hidden"
-                    )}
-                  >
-                    <ul className="flex flex-col gap-1 p- w-[200px] rounded-lg">
-                      {components.map((component) => (
-                        <ListItem
-                          key={component.title}
-                          title={component.title}
-                          href={component.href}
+          <NavigationMenu>
+            <NavigationMenuList className="flex flex-col mt-6 space-y-4">
+              {/* Sports Menu */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  onClick={() => handleMenuClick("sports")}
+                  className="cursor-pointer text-xl font-mono"
+                >
+                  Sports
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className={cn(
+                    "mt-2 z-50",
+                    openMenu === "sports" ? "block" : "hidden"
+                  )}
+                >
+                  <ul className="flex flex-col gap-1 pl-2">
+                    <li>
+                      <Link href="/Team" passHref>
+                        <span
+                          className="block p-2 border-b font-mono border-white text-white hover:bg-accent hover:text-accent-foreground"
                           onClick={handleItemClick}
                         >
-                          <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link href="/VoterList" legacyBehavior passHref >
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} >
-                      VoterList
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            </div>
-            <footer className="border-b text-center text-zinc-950 border-white  font-mono mt-[280px] text-sm">
-             <span className="font-bold p-1 mr-4">DEV BY</span>:  AYAZ AHMED <br/>
-             &nbsp;&nbsp;&nbsp;&nbsp; & Toseef Akhter
-            </footer>
-         
+                          Cricket 
+                        </span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/Team/Football" passHref>
+                        <span
+                          className="block p-2 border-b border-white font-mono text-white hover:bg-accent hover:text-accent-foreground"
+                          onClick={handleItemClick}
+                        >
+                          Football 
+                        </span>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              {/* Services Menu */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  onClick={() => handleMenuClick("services")}
+                  className="cursor-pointer text-xl font-mono"
+                >
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className={cn(
+                    "mt-2 z-50",
+                    openMenu === "services" ? "block" : "hidden"
+                  )}
+                >
+                  <ul className="flex flex-col gap-2 pl-4">
+                    {components.map((component) => (
+                      <li key={component.title}>
+                        <Link href={component.href} passHref>
+                          <span
+                            className="block p-2 font-mono border-b border-white text-white hover:bg-accent hover:text-accent-foreground"
+                            onClick={handleItemClick}
+                          >
+                            {component.title}
+                            <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              {/* Voter List Link */}
+              <NavigationMenuItem>
+                <Link href="/VoterList" passHref>
+                  <span className="block p-2 text-xl font-mono text-white hover:bg-accent hover:text-accent-foreground">
+                    VoterList
+                  </span>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </SheetContent>
-        
       </Sheet>
     </section>
-    
-    </>
-
   );
 };
 

@@ -11,8 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        {/* <Link href='/' className=" items-center justify-around  "><Image src='/icons/DHOOL-3.png' alt='logo' width={150} height={150}/></Link> */}
-      
+
       <section
         className="bg-white text-gray-500 lg:block hidden"
         style={{ padding: "0px 20px 0px 20px" }}

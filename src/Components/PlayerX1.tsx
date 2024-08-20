@@ -1,5 +1,6 @@
 
 import Image from "next/image"
+import Banner from "./Banner"
 
 const players = [
     {
@@ -105,11 +106,30 @@ const players = [
 function PlayerX1() {
   return (
     <>
+    
     <div className="items-center flex justify-center"><Image src="/logo.png" alt="Logo" width={200} height={100} priority /></div>
-    <h1 className="text-yellow-500 pt-[-100px] text-center font-bold">
-          Welcome To The Official Page Of<br/> <span className="">Dhool Khurd Cricket Club</span> 
-        </h1>
-      <h2 className="text-yellow-500 text-center text-sm mt-2"> Here Our Team Members Are</h2>
+   <div className="w-full overflow-hidden">
+    <div className="relative w-full hidden md:block">
+    <Banner 
+      text=""
+      backgroundImage="/icons/Cb.jpg"
+      textColor="custom-white"
+      height="50vh"
+      />
+    
+    </div>
+  
+    </div>
+    <h1 className="text-yellow-500 pt-[-100px] mt-8 text-center font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+  Welcome To The Official Page Of<br />
+  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+    Dhool Khurd Cricket Club
+  </span>
+</h1>
+<h2 className="text-yellow-500 text-center text-sm mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+  Here Our Team Members Are
+</h2>
+     
     <div style={{marginTop: '1.5rem',flexWrap: 'wrap',gap:'2rem',justifyContent:'center'}} className="flex items-center  justify-center text-yellow-500 ">
      
        {players.map(player => <div className="" key={player.id}>

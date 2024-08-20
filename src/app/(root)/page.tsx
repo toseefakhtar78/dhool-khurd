@@ -1,19 +1,22 @@
 import Banner from "@/Components/Banner";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <div>
-        <Banner text=" This is Official website of DHOOL KHURD village (a digital village) Welcome all 👋 " />
+        <Banner text=" This is Official website of DHOOL KHURD village (a digital village) Welcome all 👋 " 
+            backgroundImage='/icons/23.jpg'
+             textColor="custom-black"
+             height="70vh"
+        />
       </div>
 
       <h1 className="text-center mb-4 text-xl font-bold font-mono mt-12 ">
         Here is where we live :
       </h1>
 
-      <div className="bg-stone-600  overflow-hidden p-4 sm:p-6 lg:p-10 flex items-center justify-center w-full max-w-screen-lg mx-auto">
-  <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
+      <div className="bg-white mb-2  overflow-hidden p-4 sm:p-6 lg:p-10 flex items-center justify-center w-full max-w-screen-lg mx-auto">
+  <div className="relative w-full h-0 pb-[55.25%]"> {/* 16:9 Aspect Ratio */}
     <iframe
       className="absolute inset-0 w-full h-full"
       title="map"
