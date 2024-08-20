@@ -8,7 +8,7 @@ const HouseForRent = () => {
         text="(Welcome to our Property Dealing Section) Hope you find Best Deal" 
         backgroundImage="/icons/BP.jpg" 
          textColor="custom-black"
-         height="600px"
+        
       />
    </div>
    

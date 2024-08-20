@@ -131,7 +131,7 @@ const MobileNav = () => {
               </NavigationMenuItem>
               {/* Voter List Link */}
               <NavigationMenuItem>
-                <Link href="/VoterList" passHref>
+                <Link href="/VoterList" legacyBehavior passHref>
                   <span className="block p-2 text-xl font-mono text-white hover:bg-accent hover:text-accent-foreground">
                     VoterList
                   </span>

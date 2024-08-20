@@ -8,8 +8,7 @@ const page = () => {
       text="Coming Soon !!" 
       backgroundImage='/icons/fb1.jpg'
        textColor="custom-black"
-       height="600px"
-       width='100%'
+      
   />
       
     </div>
