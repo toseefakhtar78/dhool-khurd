@@ -36,8 +36,7 @@ const components: { title: string; href: string; description: string }[] = [
     title: "House For Rent",
     href: "/HouseForRent",
     description:
-      "All shops and houses for sell or rent",
-  },
+     "",}
 
 ]
 
@@ -66,12 +65,17 @@ const  NavMenu=()=> {
                   {/* </a> */} 
                 {/* </NavigationMenuLink>  */}
               {/* </li> */}
-              <ListItem href="/Team" title="Cricket">
+             <Link href='/Team'>
+             <ListItem  title="Cricket">
                 {/* Re-usable components built using Radix UI and Tailwind CSS. */}
               </ListItem>
-              <ListItem href="/Team/VolleyBall" title="Football">
+              </Link> 
+              <Link href='/Team/Football'>
+                <ListItem title="Football">
                 {/* How to install dependencies and structure your app. */}
               </ListItem>
+              </Link>
+            
               {/* <ListItem href="/docs/primitives/typography" title=""> */}
                 {/* Styles for headings, paragraphs, lists...etc */}
               {/* </ListItem> */}
@@ -84,11 +88,13 @@ const  NavMenu=()=> {
             <ul className="grid w-[400px] gap- p-0 text-center md:w-[500px] md:grid-cols-1 lg:w-[200px] ">
               {components.map((component) => (
                 <ListItem
+                
                   key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  // title={component.title}
+                  // href={component.href}
                 >
-                  <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
+                   <Link href={component.href} legacyBehavior passHref>{component.title}</Link><br/>
+               
                 </ListItem>
               ))}
             </ul>

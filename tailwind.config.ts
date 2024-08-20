@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
+  mode: 'jit',
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -20,6 +21,8 @@ const config = {
     },
     extend: {
       colors: {
+        'custom-black': '#000000',
+        'custom-white': '#ffffff',
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
         },
