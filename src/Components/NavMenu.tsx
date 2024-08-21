@@ -45,7 +45,7 @@ const  NavMenu=()=> {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem className="hover:underline-offset-4">
-          <NavigationMenuTrigger>Sports</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:border-b-8 border-gray-400">Sports</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className=" gap-0 flex flex-col p-0 text-center md:w-[400px] lg:w-[150px] lg:grid-cols-[.75fr_1fr]">
               {/* <li className="row-span-2"> */}
@@ -66,12 +66,12 @@ const  NavMenu=()=> {
                 {/* </NavigationMenuLink>  */}
               {/* </li> */}
              <Link href='/Team'>
-             <ListItem  title="Cricket">
+             <ListItem  title="Cricket" className=" hover:bg-gray-400 ">
                 {/* Re-usable components built using Radix UI and Tailwind CSS. */}
               </ListItem>
               </Link> 
               <Link href='/Team/Football'>
-                <ListItem title="Football">
+                <ListItem title="Football" className=" hover:bg-gray-400 ">
                 {/* How to install dependencies and structure your app. */}
               </ListItem>
               </Link>
@@ -83,12 +83,12 @@ const  NavMenu=()=> {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:border-b-8 border-gray-400">Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap- p-0 text-center md:w-[500px] md:grid-cols-1 lg:w-[200px] ">
               {components.map((component) => (
                 <ListItem
-                
+                className=" hover:bg-gray-400 "
                   key={component.title}
                   // title={component.title}
                   // href={component.href}
@@ -100,10 +100,17 @@ const  NavMenu=()=> {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hover:border-b-8 p border-gray-400 rounded-md">
           <Link href="/VoterList" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
              VoterList
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem className="hover:border-b-8 border-gray-400 rounded-md">
+          <Link href="/PrivacyPolicy" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+             Privacy Policy
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

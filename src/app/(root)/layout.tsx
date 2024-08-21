@@ -16,7 +16,7 @@ export default function RootLayout({
         className="bg-white text-gray-500 lg:block hidden"
         style={{ padding: "0px 20px 0px 20px" }}
       >
-        <div className="flex justify-between h-[89px] font-mono tracking-wide">
+        <div className="flex justify-between h-[90px] font-mono tracking-wide">
           <div className="h-auto w-auto items-center justify-center flex">
             {" "}
             <Link href="/" className="">
