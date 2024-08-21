@@ -18,14 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <GoogleTagManager gtmId="G-3WF9PRTKHS" />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
-          crossOrigin="anonymous"
-        ></Script>
-      </head>
+     <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=G-3WF9PRTKHS"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
+      crossOrigin="anonymous">
+    </script>
+
+</head>
       <body className={inter.className}>
         {children}
 
