@@ -1,4 +1,7 @@
+import AdSense from "@/Components/Adsense";
 import Banner from "@/Components/Banner";
+import { AppProps } from "next/app";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -25,18 +28,16 @@ export default function Home() {
     />
   </div>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
-     crossOrigin="anonymous"></script>
+<div className="adsense-ad-container">
+<Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1241486495309147"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+<AdSense />\
 
-<ins className="adsbygoogle"
-     style={{display:'blocked'}}
-     data-ad-client="ca-pub-1241486495309147"
-     data-ad-slot="6780024865"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</div>
     </>
   );
 }

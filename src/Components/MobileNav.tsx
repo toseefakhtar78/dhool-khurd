@@ -55,7 +55,10 @@ const MobileNav = () => {
           side="left"
           className="bg-stone-600 text-white p-4 max-w-[260px] h-full"
         >
-          <Link href="/" className="flex items-center border-b border-white pb-4">
+          <Link
+            href="/"
+            className="flex items-center border-b border-white pb-4"
+          >
             <Image src="/icons/D2.png" alt="logo" width={120} height={100} />
           </Link>
           <NavigationMenu>
@@ -64,7 +67,7 @@ const MobileNav = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   onClick={() => handleMenuClick("sports")}
-                  className="cursor-pointer text-xl font-mono"
+                  className="cursor-pointer text-xl font-mono "
                 >
                   Sports
                 </NavigationMenuTrigger>
@@ -81,7 +84,7 @@ const MobileNav = () => {
                           className="block p-2 border-b font-mono border-white text-white hover:bg-accent hover:text-accent-foreground"
                           onClick={handleItemClick}
                         >
-                          Cricket 
+                          Cricket
                         </span>
                       </Link>
                     </li>
@@ -91,7 +94,7 @@ const MobileNav = () => {
                           className="block p-2 border-b border-white font-mono text-white hover:bg-accent hover:text-accent-foreground"
                           onClick={handleItemClick}
                         >
-                          Football 
+                          Football
                         </span>
                       </Link>
                     </li>
@@ -121,7 +124,9 @@ const MobileNav = () => {
                             onClick={handleItemClick}
                           >
                             {component.title}
-                            <span className="text-sm text-yellow-500 uppercase">{component.description}</span>
+                            <span className="text-sm text-yellow-500 uppercase">
+                              {component.description}
+                            </span>
                           </span>
                         </Link>
                       </li>
@@ -134,6 +139,13 @@ const MobileNav = () => {
                 <Link href="/VoterList" legacyBehavior passHref>
                   <span className="block p-2 text-xl font-mono text-white hover:bg-accent hover:text-accent-foreground">
                     VoterList
+                  </span>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/PrivacyPolicy" legacyBehavior passHref>
+                  <span className="block p-2 text-xl font-mono text-white hover:bg-accent hover:text-accent-foreground">
+                    Privacy-Policy
                   </span>
                 </Link>
               </NavigationMenuItem>
@@ -157,7 +169,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 p-2 border-b border-white py-4  leading-none text-white outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 p-2 border-b border-white py-4  leading-none text-white outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:underline-offset-8 ",
             className
           )}
           {...props}

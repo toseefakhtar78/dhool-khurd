@@ -27,6 +27,9 @@ export default function RootLayout({
     </script>
 
 </head>
+
+<GoogleTagManager gtmId='G-3WF9PRTKHS'/>
+<Script async src="https://www.googletagmanager.com/gtm.js?id=G-3WF9PRTKHS"></Script>
       <body className={inter.className}>
         {children}
 
