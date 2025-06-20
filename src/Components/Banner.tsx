@@ -37,7 +37,7 @@ const Banner: React.FC<BannerProps> = ({
       />
     
       <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-        <h1 className={`lg:text-4xl md:text-2xl text-xl font-mono font-bold text-center ${textColorClass}`}>
+        <h1 className={`lg:text-4xl md:text-2xl text-xl translate-x-5 font-mono font-bold text-center ${textColorClass}`}>
           {text}
         </h1>
       </div>
